@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Restaurantes</h3>
+
+<hr/>
+
+<div ng-controller="restaurantesCtrl">
+    <table class="table table-striped">
+
+        <tr ng-repeat="restaurante in restaurantes">
+            <td> {{restaurante.IdRestaurante}} </td>
+            <td> {{restaurante.Nome}} </td>
+            <td class="text-right">
+                <button class="btn btn-success" ng-click="CadastrarPratos(restaurante)" data-toggle="tooltip" title="Clique para criar os pratos">O</button>
+            </td>
+            <td class="text-right">
+                <button class="btn btn-danger" ng-click="DeletaRestaurante(restaurante)" data-toggle="tooltip" title="Clique para Deletar o restaurante">X</button>
+            </td>
+        </tr>
+    </table>
+
+    <br/>
+
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" required ng-model="restaurante.Nome" class="form-control" />
+    </div>
+
+    <a href="#" class="btn btn-primary" ng-click="AddRestaurante(restaurante)" ng-disabled="!restaurante.Nome"
+       data-toggle="tooltip" title="Adicionar Restaurante">Adicionar Restaurante</a>
+
+</div>

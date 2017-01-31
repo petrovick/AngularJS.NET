@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3>Macoratti .net</h3>
+<hr />
+<div ng-controller="produtosCtrl">
+    <table class="table table-striped">
+
+        <tr ng-repeat="usuario in usuarios">
+            <td> {{usuario.Nome}} </td>
+            <td> {{usuario.Facebook}} </td>
+            <td> {{usuario.RedeSocialId}} </td>
+            <td class="text-right">
+                <button class="btn btn-danger" ng-click="DeletaUsuario(usuario)" data-toggle="tooltip" title="Clique para Deletar Produto">X</button>
+            </td>
+        </tr>
+    </table>
+
+    <br />
+
+
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" required ng-model="usuario.Nome" class="form-control" />
+            </div>
+    
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" required ng-model="usuario.Username" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="password" required ng-model="usuario.Senha" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="text" required ng-model="usuario.Facebook" class="form-control" />
+            </div>
+    
+            <div class="form-group">
+                <label>Token</label>
+                <input type="text" required ng-model="usuario.Token" class="form-control" />
+            </div>
+    
+            <div class="form-group">
+                <label>RedeSocialId</label>
+                <input type="text" required ng-model="usuario.RedeSocialId" class="form-control" />
+            </div>
+
+            <a href="#" class="btn btn-primary" ng-click="AddUsuario(usuario)" ng-disabled="!produto.NomeProduto || !produto.PrecoProduto"
+               data-toggle="tooltip" title="Adicionar Produto">Adicionar Produto</a>
+</div>

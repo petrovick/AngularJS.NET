@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "angularjs.Business", "angularjs.Business\angularjs.Business.csproj", "{EAD1F8F5-4173-4517-AEDD-A01E48700337}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJS.Web", "AngularJS.Web\AngularJS.Web.csproj", "{A829D8BD-028F-4EC8-BC03-ECA5638E9E1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "angularjs.Data", "angularjs.Data\angularjs.Data.csproj", "{C46F3595-42CC-490E-A62C-85DDCAAD6CBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "angularjs.Application", "angularjs.Application\angularjs.Application.csproj", "{70C0B0EC-FFD6-4C2B-8A4D-12CE558F089F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAD1F8F5-4173-4517-AEDD-A01E48700337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAD1F8F5-4173-4517-AEDD-A01E48700337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAD1F8F5-4173-4517-AEDD-A01E48700337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAD1F8F5-4173-4517-AEDD-A01E48700337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A829D8BD-028F-4EC8-BC03-ECA5638E9E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A829D8BD-028F-4EC8-BC03-ECA5638E9E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A829D8BD-028F-4EC8-BC03-ECA5638E9E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A829D8BD-028F-4EC8-BC03-ECA5638E9E1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C46F3595-42CC-490E-A62C-85DDCAAD6CBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C46F3595-42CC-490E-A62C-85DDCAAD6CBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C46F3595-42CC-490E-A62C-85DDCAAD6CBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C46F3595-42CC-490E-A62C-85DDCAAD6CBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70C0B0EC-FFD6-4C2B-8A4D-12CE558F089F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70C0B0EC-FFD6-4C2B-8A4D-12CE558F089F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70C0B0EC-FFD6-4C2B-8A4D-12CE558F089F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70C0B0EC-FFD6-4C2B-8A4D-12CE558F089F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

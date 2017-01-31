@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Prataos</h3>
+
+<div id="pratosCtrl" ng-controller="pratosCtrl" data-ng-init="ListarPratos()">
+    <table class="table table-striped">
+        <div id="idRestaurante" idRestaurante="@ViewBag.IdRestaurante"></div>
+        <tr ng-repeat="prato in pratos">
+            <td> {{prato.IdPrato}} </td>
+            <td> {{prato.Nome}} </td>
+            <td class="text-right">
+                <button class="btn btn-danger" ng-click="DeletaPrato(prato)" data-toggle="tooltip" title="Clique para Deletar o prato">X</button>
+            </td>
+        </tr>
+    </table>
+
+    <br />
+
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" required ng-model="prato.Nome" class="form-control" />
+    </div>
+
+    <a href="#" class="btn btn-primary" ng-click="AddPrato(prato)" ng-disabled="!prato.Nome"
+       data-toggle="tooltip" title="Adicionar Prato">Adicionar Prato</a>
+</div>
+

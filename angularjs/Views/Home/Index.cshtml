@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h3>Macoratti .net</h3>
+    <hr />
+    <div ng-controller="produtosCtrl">
+        <table class="table table-striped">
+
+            <tr ng-repeat="produto in produtos">
+                <td> {{produto.ProdutoNome}} </td>
+                <td class="text-right">
+                    <button class="btn btn-danger" ng-click="DeletaProduto(produto)" data-toggle="tooltip" title="Clique para Deletar Produto">X</button>
+                </td>
+            </tr>
+            <tr>
+                <th>Nome do Produto &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Preço do Produto</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" required ng-model="produto.NomeProduto" />
+                    <input type="text" required ng-model="produto.PrecoProduto" />
+                    <a href="#" class="btn btn-primary" ng-click="AddProduto(produto)" ng-disabled="!produto.NomeProduto || !produto.PrecoProduto"
+                       data-toggle="tooltip" title="Adicionar Produto">Adicionar Produto</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

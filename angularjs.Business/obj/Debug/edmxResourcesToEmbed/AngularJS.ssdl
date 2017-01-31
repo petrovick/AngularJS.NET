@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="allmatechModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Modulo">
+    <Key>
+      <PropertyRef Name="IdModulo" />
+    </Key>
+    <Property Name="IdModulo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Descricao" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="255" />
+    <Property Name="UrlImagem" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="100" />
+    <Property Name="Senha" Type="varchar" MaxLength="100" />
+    <Property Name="Facebook" Type="bit" Nullable="false" />
+    <Property Name="Token" Type="varchar(max)" />
+    <Property Name="Username" Type="varchar" MaxLength="30" />
+    <Property Name="RedeSocialId" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="UsuarioModulo">
+    <Key>
+      <PropertyRef Name="IdModulo" />
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdModulo" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="allmatechModelStoreContainer">
+    <EntitySet Name="Modulo" EntityType="Self.Modulo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsuarioModulo" EntityType="Self.UsuarioModulo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
